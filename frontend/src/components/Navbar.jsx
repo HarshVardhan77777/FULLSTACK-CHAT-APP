@@ -5,6 +5,7 @@ import { LogOut, MessageSquare, Settings, User } from "lucide-react";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
+  //console.log(`${authUser.fullName}`);
 
   return (
     <header
@@ -21,7 +22,9 @@ const Navbar = () => {
               <h1 className="text-lg font-bold">Chatty</h1>
             </Link>
           </div>
-
+           <div>
+            <h1 className="text-lg font-bold"><span>Me : </span>{authUser?.fullName}</h1>
+           </div>
           <div className="flex items-center gap-2">
             <Link
               to={"/settings"}
