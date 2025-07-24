@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-      origin: "https://fullstack-chat-app-1-a2ww.onrender.com",
+      origin: "https://fullstack-chat-app-2-d508.onrender.com",
       credentials: true,
     })
   );
