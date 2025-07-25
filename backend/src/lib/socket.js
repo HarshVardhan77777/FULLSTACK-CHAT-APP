@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://fullstack-chat-app-1-a2ww.onrender.com"],
+    origin: ["http://localhost:5173"],
   },
 });
 
