@@ -39,7 +39,6 @@ const MessageInput = () => {
         image: imagePreview,
       });
 
-      // Clear form
       setText("");
       setImagePreview(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
@@ -96,7 +95,7 @@ const MessageInput = () => {
             <Image size={20} />
           </button>
         </div>
-        <button                      // Sending button
+        <button                     
           type="submit"
           className="btn btn-sm btn-circle"
           disabled={!text.trim() && !imagePreview}
