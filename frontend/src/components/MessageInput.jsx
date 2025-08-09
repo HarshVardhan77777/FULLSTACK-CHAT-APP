@@ -19,6 +19,7 @@ const MessageInput = () => {
 
     const reader = new FileReader();
     reader.onloadend = () => {
+      // @ts-ignore
       setImagePreview(reader.result);
     };
     reader.readAsDataURL(file);
@@ -26,6 +27,7 @@ const MessageInput = () => {
 
   const removeImage = () => {
     setImagePreview(null);
+    // @ts-ignore
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
@@ -41,6 +43,7 @@ const MessageInput = () => {
 
       setText("");
       setImagePreview(null);
+      // @ts-ignore
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (error) {
       console.error("Failed to send message:", error);
@@ -90,7 +93,8 @@ const MessageInput = () => {
             type="button"
             className={`hidden sm:flex btn btn-circle
                      ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
-            onClick={() => fileInputRef.current?.click()}
+            // @ts-ignore
+            onClick={() => fileInputRef.current?.click()}  // opens file picker directly
           >
             <Image size={20} />
           </button>
